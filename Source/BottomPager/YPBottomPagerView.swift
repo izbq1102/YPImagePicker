@@ -27,7 +27,7 @@ final class YPBottomPagerView: UIView {
             0,
             |scrollView|,
             0,
-            |header| ~ 44
+            |header| ~ 64
         )
         
         if #available(iOS 11.0, *) {
