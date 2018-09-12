@@ -13,6 +13,8 @@ final class YPMenuItem: UIView {
     
     var textLabel = UILabel()
     var button = UIButton()
+    var iconImageView = UIImageView()
+    var bottomView = UIView()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -32,13 +34,21 @@ final class YPMenuItem: UIView {
         backgroundColor = .clear
         
         sv(
+            iconImageView,
             textLabel,
-            button
+            button,
+            bottomView
         )
-        
+        iconImageView.centerInContainer()
+        |-(10)-iconImageView-(10)-|
         textLabel.centerInContainer()
         |-(10)-textLabel-(10)-|
         button.fillContainer()
+        
+        layout(
+            |-(10)-bottomView.height(2.0)-(10)-|,
+            0
+        )
         
         textLabel.style { l in
             l.textAlignment = .center
@@ -46,6 +56,14 @@ final class YPMenuItem: UIView {
             l.textColor = self.unselectedColor()
             l.adjustsFontSizeToFitWidth = true
             l.numberOfLines = 2
+        }
+        
+        iconImageView.style { l in
+            l.contentMode = .center
+        }
+        
+        bottomView.style { l in
+            l.backgroundColor = self.unselectedColor()
         }
     }
     
@@ -58,10 +76,14 @@ final class YPMenuItem: UIView {
     }
     
     func select() {
+        iconImageView.tintColor = selectedColor()
         textLabel.textColor = selectedColor()
+        bottomView.backgroundColor = selectedColor()
     }
     
     func deselect() {
+        iconImageView.tintColor = unselectedColor()
         textLabel.textColor = unselectedColor()
+        bottomView.backgroundColor = unselectedColor()
     }
 }

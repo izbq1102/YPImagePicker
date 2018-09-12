@@ -80,7 +80,7 @@ class ExampleViewController: UIViewController {
         // config.targetImageSize = .cappedTo(size: 1024)
 
         /* Choose what media types are available in the library. Defaults to `.photo` */
-        config.library.mediaType = .photoAndVideo
+        config.library.mediaType = .photo
 
         /* Enables selecting the front camera by default, useful for avatars. Defaults to false */
         // config.usesFrontCamera = true
@@ -111,7 +111,7 @@ class ExampleViewController: UIViewController {
 
         /* Defines which screens are shown at launch, and their order.
            Default value is `[.library, .photo]` */
-        config.screens = [.library, .photo, .video]
+        config.screens = [.library, .photo]
         
         /* Can forbid the items with very big height with this property */
 //        config.library.minWidthForItem = UIScreen.main.bounds.width * 0.8
@@ -139,7 +139,7 @@ class ExampleViewController: UIViewController {
         /* Defines if the status bar should be hidden when showing the picker. Default is true */
         config.hidesStatusBar = false
 
-        config.library.maxNumberOfItems = 5
+        config.library.maxNumberOfItems = 1
         
         /* Disable scroll to change between mode */
         // config.isScrollToChangeModesEnabled = false

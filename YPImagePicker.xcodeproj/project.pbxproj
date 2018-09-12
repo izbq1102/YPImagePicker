@@ -205,6 +205,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0046CFD52148B7E700FB8D9F /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
 		52412A891CA6114A0073C4BE = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +429,7 @@
 		EB65C4B3209281A10037858B /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				0046CFD52148B7E700FB8D9F /* Instagram */,
 				99C6D69E1F1FB5C100711DB2 /* Gallery */,
 				99C6D6A61F1FB5C100711DB2 /* Photo */,
 				99C6D6B61F1FB5C100711DB2 /* Video */,

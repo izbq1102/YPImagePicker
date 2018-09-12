@@ -46,7 +46,7 @@ public class YPPickerVC: YPBottomPager, YPBottomPagerDelegate {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(r: 247, g: 247, b: 247)
+        view.backgroundColor = .white
         
         delegate = self
         
@@ -266,7 +266,8 @@ public class YPPickerVC: YPBottomPager, YPBottomPagerDelegate {
     
     func updateUI() {
         // Update Nav Bar state.
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: YPConfig.wordings.cancel,
+        let cancelButtonIcon = YPConfig.icons.cancelButtonIcon
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: cancelButtonIcon,
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(close))

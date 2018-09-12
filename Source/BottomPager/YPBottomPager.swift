@@ -69,7 +69,13 @@ public class YPBottomPager: UIViewController, UIScrollViewDelegate {
         // Build headers
         for (index, c) in controllers.enumerated() {
             let menuItem = YPMenuItem()
-            menuItem.textLabel.text = c.title?.capitalized
+            if c is YPCameraVC {
+                  menuItem.iconImageView.image = YPImagePickerConfiguration.shared.icons.cameraIcon
+            } else if c is YPLibraryVC {
+                menuItem.iconImageView.image = YPImagePickerConfiguration.shared.icons.galleryIcon
+            } else {
+                menuItem.textLabel.text = c.title?.capitalized
+            }
             menuItem.button.tag = index
             menuItem.button.addTarget(self,
                                       action: #selector(tabTapped(_:)),
