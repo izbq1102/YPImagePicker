@@ -47,7 +47,7 @@ final class YPMenuItem: UIView {
         
         layout(
             |-(10)-bottomView.height(2.0)-(10)-|,
-            0
+            10
         )
         
         textLabel.style { l in
