@@ -26,7 +26,7 @@ public struct YPIcons {
     public var captureVideoImage: UIImage = imageFromBundle("yp_iconVideoCapture")
     public var captureVideoOnImage: UIImage = imageFromBundle("yp_iconVideoCaptureRecording")
     public var playImage: UIImage = imageFromBundle("yp_play")
-    public var cancelButtonIcon: UIImage = imageFromBundle("yp_close_black_icon")
+    public var cancelButtonIcon: UIImage = imageFromBundle("yp_close_black_icon").withRenderingMode(.alwaysOriginal)
     public var cameraIcon: UIImage = imageFromBundle("yp_camera_icon").withRenderingMode(.alwaysTemplate)
     public var galleryIcon: UIImage = imageFromBundle("yp_gallery_icon").withRenderingMode(.alwaysTemplate)
 }
